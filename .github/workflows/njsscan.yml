@@ -28,10 +28,12 @@ jobs:
         node-version: '23'
     - name: Frontend compile
       run: |
+        mkdir client
         cd client
         find . -name "*.js" -exec node --check {} +
     - name: Backend compile
       run: |
+        mkdir api
         cd api
         find . -name "*.js" -exec node --check {} +
 
